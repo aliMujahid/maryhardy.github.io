@@ -1,0 +1,246 @@
+:root {
+  --color-bg: #fff8f3;
+  --color-primary: #fd6e0a;
+  --section-heading: 2.2rem;
+  --nav-heading: 3rem;
+  --hero-name: 5.3em;
+  --nav-link: 1.25rem;
+  --regular-text: 1rem;
+  --regular-text-color: #757575;
+}
+
+a,
+li {
+  all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #474747;
+}
+
+body {
+  font-family: "open sans";
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 0 15vw;
+
+  background: var(--color-bg);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav h1 {
+  font-size: var(--nav-heading);
+  font-weight: bold;
+}
+
+span#navHeading {
+  color: var(--color-primary);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  color: #474747;
+  display: block;
+  padding: 1rem 2rem;
+  font-size: var(--nav-link);
+  text-align: center;
+  margin-left: 1rem;
+}
+
+p {
+  color: var(--regular-text-color);
+}
+
+button {
+  border: unset;
+}
+
+button i {
+  border: 1px solid black;
+}
+
+span.btn-text {
+  border: 1px solid black;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  position: relative;
+  font-size: var(--nav-link);
+  background: var(--color-primary);
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.skills .card {
+  width: 10vw;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
+}
+
+.skill-detail {
+  text-align: left;
+}
+
+.card img {
+  left: 0;
+  top: 0;
+}
+
+#hero,
+#contact {
+  display: flex;
+  padding: 0 15vw;
+  background: var(--color-bg);
+}
+
+#hero {
+  height: 100vh;
+  background-image: url(./media/developer.png), url(./media/header_bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  padding-right: 0;
+}
+
+.greeting {
+  font-size: var(--nav-heading);
+  font-weight: 600;
+}
+
+.hero-name {
+  font-size: var(--hero-name);
+}
+
+#contact,
+#portfolio {
+  padding: 0 15vw;
+}
+
+#about {
+  margin: 2rem 0;
+  padding: 13rem;
+  background: var(--color-bg);
+}
+
+#about .section {
+  background: white;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-value {
+  font-weight: bold;
+  color: #474747;
+}
+
+.section {
+  text-align: center;
+}
+
+.section.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-heading h2 {
+  margin-top: 10rem;
+  font-size: var(--section-heading);
+  font-weight: bold;
+}
+
+#about-heading {
+  margin-top: unset;
+}
+
+.section-body,
+.ed-ex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ed-ex .card {
+  border-bottom: 2px solid #d1d1d1;
+  text-align: left;
+}
+
+.ed-ex .card:last-child {
+  border-bottom: unset;
+}
+
+.ed-ex .card h3 {
+  margin: unset;
+  font-size: 1.6rem;
+}
+
+.ed-ex .card .card-head {
+  margin-bottom: 0.6rem;
+}
+
+.ed-ex .card .card-head p {
+  font-weight: 600;
+  font-size: var(--nav-link);
+}
+
+#contact {
+  display: flex;
+  padding-bottom: 8vh;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.social-media,
+.email {
+  width: 30vw;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  display: block;
+  border: unset;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+}
+
+input#messege {
+  height: 8vh;
+}
