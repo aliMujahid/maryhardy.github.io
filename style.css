@@ -21,9 +21,13 @@ a:hover {
 
 body {
   font-family: "open sans";
-  border: 1px solid black;
   margin: 0;
   padding: 0;
+}
+
+body > .developer {
+  position: absolute;
+  margin: 3vh 3vw;
 }
 
 nav {
@@ -66,30 +70,53 @@ button {
   border: unset;
 }
 
-button i {
-  border: 1px solid black;
-}
-
-span.btn-text {
-  border: 1px solid black;
-}
-
 .hero-buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .btn {
-  display: flex;
-  position: relative;
-  font-size: var(--nav-link);
-  background: var(--color-primary);
-  padding: 1rem 2rem;
-  color: white;
+  background-color: #fd6e0a;
+  font-size: 1.25rem;
   font-weight: bold;
-  text-align: center;
-  border-radius: 5px;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background-color: #e5660a;
+}
+
+.contact-btn {
+  background-color: #ffffff;
+  color: #fd6e0a;
+  border: 1px solid #fd6e0a;
+}
+
+.contact-btn:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn .fa-solid {
+  font-size: 1.25rem;
+}
+
+.fa-phone {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fd6e0a;
 }
 
 .card {
@@ -115,19 +142,16 @@ span.btn-text {
   top: 0;
 }
 
-#hero,
-#contact {
-  display: flex;
-  padding: 0 15vw;
-  background: var(--color-bg);
-}
-
 #hero {
-  height: 100vh;
-  background-image: url(./media/developer.png), url(./media/header_bg.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom right;
+  display: flex;
+  padding-left: 15vw;
   padding-right: 0;
+  padding-top: 4vh;
+  background: var(--color-bg);
+  justify-content: space-between;
+}
+.hero-text {
+  width: 40%;
 }
 
 .greeting {
@@ -137,6 +161,19 @@ span.btn-text {
 
 .hero-name {
   font-size: var(--hero-name);
+}
+
+.hero-image {
+  background-image: url(./media/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+#mary {
+  transform: translateX(10rem);
 }
 
 #contact,
@@ -217,6 +254,8 @@ span.btn-text {
 }
 
 #contact {
+  padding: 0 15vw;
+  background: var(--color-bg);
   display: flex;
   padding-bottom: 8vh;
   gap: 2rem;
