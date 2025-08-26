@@ -230,6 +230,17 @@ button {
   justify-content: space-between;
 }
 
+.ed-ex-heading {
+  margin-top: 5rem;
+  padding: 0 3rem;
+  font-size: 1.7rem;
+}
+
+.ed-ex .cards {
+  display: block;
+  text-align: left;
+}
+
 .ed-ex .card {
   border-bottom: 2px solid #d1d1d1;
   text-align: left;
@@ -254,6 +265,7 @@ button {
 }
 
 #contact {
+  margin-top: 10rem;
   padding: 0 15vw;
   background: var(--color-bg);
   display: flex;
