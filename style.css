@@ -144,6 +144,7 @@ button {
 
 #hero {
   display: flex;
+  height: 80vh;
   padding-left: 15vw;
   padding-right: 0;
   padding-top: 4vh;
@@ -164,16 +165,26 @@ button {
 }
 
 .hero-image {
-  background-image: url(./media/header_bg.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  position: relative;
   width: 60%;
-  display: flex;
-  justify-content: center;
+  height: auto;
 }
 
-#mary {
-  transform: translateX(10rem);
+#background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+#foreground {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  right: 55px;
+  width: 60%;
+  height: auto;
 }
 
 #contact,
