@@ -1,11 +1,11 @@
 :root {
   --color-bg: #fff8f3;
   --color-primary: #fd6e0a;
-  --section-heading: 2.2rem;
-  --nav-heading: 3rem;
-  --hero-name: 5.3em;
-  --nav-link: 1.25rem;
-  --regular-text: 1rem;
+  --hero-name: clamp(3.3rem, 4vw + 1.5rem, 5.3rem);
+  --nav-heading: clamp(2rem, 2.5vw + 1rem, 3rem);
+  --section-heading: clamp(1.5rem, 1.8vw + 1rem, 2.2rem);
+  --nav-link: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+  --regular-text: clamp(0.875rem, 0.5vw + 0.5rem, 1rem);
   --regular-text-color: #757575;
 }
 
@@ -183,7 +183,7 @@ button {
   z-index: 999;
   bottom: 0;
   right: 55px;
-  width: 60%;
+  width: 70%;
   height: auto;
 }
 
