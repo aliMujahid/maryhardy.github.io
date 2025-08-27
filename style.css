@@ -23,7 +23,6 @@ body {
   font-family: "open sans";
   margin: 0;
   padding: 0;
-  border: 1px solid black;
 }
 
 body > .developer {
@@ -156,11 +155,11 @@ button {
 
   padding-left: 15vw;
   padding-right: 0;
-  padding-top: 15vh;
   background: var(--color-bg);
   justify-content: space-between;
 }
 .hero-text {
+  max-width: 768px;
   width: 40%;
 }
 
@@ -174,25 +173,13 @@ button {
 }
 
 .hero-image {
-  position: relative;
   width: 60%;
   height: auto;
+  overflow: hidden;
 }
 
-#background {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.hero-image img {
   width: 100%;
-  height: auto;
-}
-
-#foreground {
-  position: absolute;
-  z-index: 99;
-  bottom: 0;
-  right: 55px;
-  width: 70%;
   height: auto;
 }
 
@@ -319,6 +306,27 @@ input {
 
 input#messege {
   height: 8vh;
+}
+
+@media (max-width: 1440px) {
+  #hero {
+    flex-direction: column;
+    padding-left: unset;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    width: 70%;
+    margin: auto;
+  }
+
+  .developer {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
