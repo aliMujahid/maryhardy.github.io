@@ -23,16 +23,20 @@ body {
   font-family: "open sans";
   margin: 0;
   padding: 0;
+  border: 1px solid black;
 }
 
 body > .developer {
   position: absolute;
   margin: 3vh 3vw;
+  z-index: 111;
 }
 
 nav {
   padding: 0 15vw;
-
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--color-bg);
   display: flex;
   justify-content: space-between;
@@ -47,7 +51,7 @@ span#navHeading {
   color: var(--color-primary);
 }
 
-nav ul {
+.nav-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,6 +66,12 @@ nav ul li {
   margin-left: 1rem;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: auto 0;
+}
 p {
   color: var(--regular-text-color);
 }
@@ -128,7 +138,7 @@ button {
 }
 
 .skills .card {
-  width: 10vw;
+  width: 25%;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
 }
@@ -180,7 +190,7 @@ button {
 
 #foreground {
   position: absolute;
-  z-index: 999;
+  z-index: 99;
   bottom: 0;
   right: 55px;
   width: 70%;
@@ -189,12 +199,14 @@ button {
 
 #contact,
 #portfolio {
-  padding: 0 15vw;
+  max-width: 1280px;
+  width: 93%;
+  margin: 0 auto;
 }
 
 #about {
   margin: 2rem 0;
-  padding: 13rem;
+  padding: clamp(2rem, 8vw, 13rem);
   background: var(--color-bg);
 }
 
@@ -248,7 +260,9 @@ button {
 }
 
 .ed-ex .cards {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   text-align: left;
 }
 
@@ -277,17 +291,19 @@ button {
 
 #contact {
   margin-top: 10rem;
-  padding: 0 15vw;
+  margin-bottom: 10rem;
   background: var(--color-bg);
   display: flex;
-  padding-bottom: 8vh;
+
   gap: 2rem;
+  padding: 0 2rem;
   justify-content: space-between;
 }
 
 .social-media,
 .email {
-  width: 30vw;
+  width: 40%;
+  padding: 0 2rem;
 }
 
 .email {
@@ -305,4 +321,99 @@ input {
 
 input#messege {
   height: 8vh;
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    flex-direction: column;
+    height: unset;
+    padding: 0 2rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .hero-image,
+  .developer {
+    display: none;
+  }
+
+  .hero-text {
+    order: 2;
+    width: 100%;
+  }
+
+  .section-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .skills .card {
+    width: unset;
+    display: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* offscreen */
+    height: 100%;
+    width: 250px;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 60px 20px;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    display: none;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.active {
+    right: 0;
+    display: flex;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  .ed-ex {
+    flex-direction: column;
+  }
+
+  #contact {
+    flex-direction: column-reverse;
+  }
+
+  #contact > div {
+    width: 70%;
+  }
 }
