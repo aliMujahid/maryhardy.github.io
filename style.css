@@ -290,13 +290,12 @@ button {
 }
 
 #contact {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin: 10rem auto;
   background: var(--color-bg);
   display: flex;
 
   gap: 2rem;
-  padding: 0 2rem;
+  padding: 0 15%;
   justify-content: space-between;
 }
 
@@ -304,6 +303,7 @@ button {
 .email {
   width: 40%;
   padding: 0 2rem;
+  margin: 2rem;
 }
 
 .email {
